@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Demo — snckish</title>
+  <link rel="icon" type="image/png" href="assets/img/log0.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/project.css" />
+</head>
+<body>
+
+  <!-- Read progress bar -->
+  <div class="read-progress" id="readProgress"></div>
+
+  <!-- Back button -->
+  <a href="index.html" class="back-btn">
+    <i class="bi bi-chevron-left"></i> Back
+  </a>
+
+  <!-- ── HERO ── -->
+  <div class="proj-hero" id="projHero">
+    <div class="proj-hero-bg"></div>
+    <div class="proj-hero-grid"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <!-- Floating device mockup -->
+    <div class="proj-device-wrap">
+      <div class="proj-device">
+        <div class="device-chrome">
+          <span class="dot dot-r"></span>
+          <span class="dot dot-y"></span>
+          <span class="dot dot-g"></span>
+          <span class="url-bar" id="deviceUrl">snckish.github.io/project</span>
+        </div>
+        <div class="device-screen">
+          <div class="screen-nav">
+            <div class="screen-nav-dot"></div>
+            <div class="screen-nav-dot" style="width:24px; opacity:0.5"></div>
+            <div class="screen-nav-dot" style="width:20px; opacity:0.3"></div>
+            <div style="flex:1"></div>
+            <div style="width:28px; height:20px; background: rgba(61,186,94,0.35); border-radius:4px;"></div>
+          </div>
+          <div class="screen-hero-area">
+            <div class="screen-text-lines">
+              <div class="screen-line accent"></div>
+              <div class="screen-line wide"></div>
+              <div class="screen-line short"></div>
+              <div class="screen-line shorter"></div>
+              <div style="height:8px"></div>
+              <div style="display:flex; gap:6px;">
+                <div style="width:52px; height:20px; background:rgba(61,186,94,0.4); border-radius:5px;"></div>
+                <div style="width:42px; height:20px; background:rgba(255,255,255,0.07); border-radius:5px;"></div>
+              </div>
+            </div>
+            <div class="screen-img-ph"></div>
+          </div>
+          <div class="screen-cards-row">
+            <div class="screen-card-ph"></div>
+            <div class="screen-card-ph"></div>
+            <div class="screen-card-ph"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero text -->
+    <div class="proj-hero-content">
+      <p class="proj-hero-label" id="heroLabel">Project Demo</p>
+      <h1 class="proj-hero-title" id="heroTitle">Loading<span class="hl">...</span></h1>
+      <p class="proj-hero-desc" id="heroDesc">Fetching project details…</p>
+      <div class="hero-cta-row">
+        <a href="#" class="btn-hero-primary" id="heroGithub" target="_blank" rel="noopener">
+          <i class="bi bi-github"></i> View Source
+        </a>
+        <a href="#overview" class="btn-hero-ghost" id="heroScroll">
+          <i class="bi bi-arrow-down"></i> Explore Project
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll cue -->
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <i class="bi bi-chevron-compact-down"></i>
+    </div>
+  </div>
+
+  <!-- ── ALL IN ONE PAGE ── -->
+  <section class="pd-section" id="overview">
+    <div class="container-pd">
+      <!-- Overview -->
+      <div class="reveal">
+        <span class="sec-badge">Overview</span>
+        <h2 class="sec-h2" id="overviewTitle">Project <span class="hl">Summary</span></h2>
+        <div class="divider"></div>
+        <p class="sec-sub" id="overviewDesc">—</p>
+      </div>
+      <div class="stats-row">
+        <div class="stat-card reveal reveal-delay-1">
+          <i class="bi bi-calendar3 stat-icon"></i>
+          <span class="stat-num" id="statType">—</span>
+          <span class="stat-label">Project Type</span>
+        </div>
+        <div class="stat-card reveal reveal-delay-2">
+          <i class="bi bi-layers-fill stat-icon"></i>
+          <span class="stat-num" id="statStack">—</span>
+          <span class="stat-label">Tech Stack</span>
+        </div>
+        <div class="stat-card reveal reveal-delay-3">
+          <i class="bi bi-person-fill stat-icon"></i>
+          <span class="stat-num" id="statTeam">Solo</span>
+          <span class="stat-label">Team Size</span>
+        </div>
+        <div class="stat-card reveal reveal-delay-4">
+          <i class="bi bi-check2-circle stat-icon"></i>
+          <span class="stat-num" style="color: var(--green-bright);">Done</span>
+          <span class="stat-label">Status</span>
+        </div>
+      </div>
+
+      <!-- Two column grid -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 4rem; align-items: start;">
+        <!-- Left: Tech + Features -->
+        <div>
+          <!-- Tech Stack -->
+          <div class="reveal">
+            <span class="sec-badge">Technologies</span>
+            <h3 style="font-size: 1.3rem; font-weight: 700; color: var(--text); margin: 0.5rem 0;">Built <span class="hl">With</span></h3>
+            <div class="divider"></div>
+          </div>
+          <div class="tech-grid reveal" id="techGrid"></div>
+
+          <!-- Features -->
+          <div class="reveal" style="margin-top: 3rem;">
+            <span class="sec-badge">Features</span>
+            <h3 style="font-size: 1.3rem; font-weight: 700; color: var(--text); margin: 0.5rem 0;">Key <span class="hl">Highlights</span></h3>
+            <div class="divider"></div>
+          </div>
+          <div class="feature-grid" id="featureGrid"></div>
+        </div>
+
+        <!-- Right: Screenshots + Timeline -->
+        <div>
+          <!-- Screenshots -->
+          <div class="reveal">
+            <span class="sec-badge">Preview</span>
+            <h3 style="font-size: 1.3rem; font-weight: 700; color: var(--text); margin: 0.5rem 0;">UI <span class="hl">Mockup</span></h3>
+            <div class="divider"></div>
+          </div>
+          <div class="gallery-grid reveal" style="grid-template-columns: 1fr; margin-bottom: 3rem;">
+            <div id="mockupCarousel" class="carousel slide mockup-carousel gallery-main" data-bs-ride="carousel" data-bs-interval="4000">
+
+              <!-- dot indicators (generated by JS from p.images) -->
+              <div class="carousel-indicators" id="carouselIndicators"></div>
+
+              <!-- slides (generated by JS from p.images) -->
+              <div class="carousel-inner" id="carouselInner"></div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#mockupCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#mockupCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Timeline -->
+          <div class="reveal">
+            <span class="sec-badge">Development</span>
+            <h3 style="font-size: 1.3rem; font-weight: 700; color: var(--text); margin: 0.5rem 0;">Build <span class="hl">Journey</span></h3>
+            <div class="divider"></div>
+          </div>
+          <div class="timeline" id="timeline"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ── CTA ── -->
+  <div class="cta-section">
+    <div class="container-pd">
+      <div class="reveal">
+        <span class="sec-badge">Interested?</span>
+        <h2 class="sec-h2">Check Out the <span class="hl">Code</span></h2>
+        <p class="sec-sub">See the full source on GitHub or get in touch to collaborate.</p>
+        <div class="cta-buttons">
+          <a href="#" class="btn-hero-primary" id="ctaGithub" target="_blank" rel="noopener">
+            <i class="bi bi-github"></i> View on GitHub
+          </a>
+          <a href="index.html#contact" class="btn-hero-ghost">
+            <i class="bi bi-envelope-fill"></i> Get In Touch
+          </a>
+          <a href="index.html#projects" class="btn-hero-ghost">
+            <i class="bi bi-grid-fill"></i> All Projects
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="pd-footer">
+    <p>&copy; <span id="footerYear"></span> <a href="index.html">snckish — Mae Abiera</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // ─── Project data ───────────────────────────────────
+    const PROJECTS = {
+      zythera: {
+        title: 'Zythera',
+        subtitle: 'Furniture E-Commerce',
+        label: 'PHP · MySQL',
+        desc: 'A furniture e-commerce site featuring product catalogs, categories, and order management, backed by a MySQL database with PHP handling server-side logic and data persistence.',
+        github: 'https://github.com/snckish/Zythera',
+        type: 'Web App',
+        stack: 'PHP · SQL',
+        url: 'github.com/snckish/Zythera',
+        team: 'Partners (2)',
+        images: [
+          { src: 'assets/img/zythera/home.png', tag: 'Home' },
+          { src: 'assets/img/zythera/catalog.png', tag: 'Catalog' },
+          { src: 'assets/img/zythera/checkout.png', tag: 'Checkout' },
+        ],
+        tags: [
+          { icon: 'bi-filetype-php', label: 'PHP' },
+          { icon: 'bi-filetype-css', label: 'CSS' },
+          { icon: 'bi-database-fill', label: 'MySQL' },
+        ],
+        features: [
+          { icon: 'bi-grid-fill', title: 'Product Catalog', desc: 'Category-based furniture browsing with images and pricing.' },
+          { icon: 'bi-database-fill', title: 'Database Driven', desc: 'MySQL backend for persistent products and orders.' },
+          { icon: 'bi-person-fill', title: 'User Accounts', desc: 'Register, login, and manage your orders.' },
+          { icon: 'bi-box-seam-fill', title: 'Order Management', desc: 'Track order status from placement to fulfillment.' },
+        ],
+        timeline: [
+          { date: 'Phase 1', title: 'DB Design', desc: 'ERD, schema design, and MySQL table setup.' },
+          { date: 'Phase 2', title: 'Backend (PHP)', desc: 'CRUD operations, sessions, and authentication.' },
+          { date: 'Phase 3', title: 'Frontend', desc: 'CSS styling, layout, and integration with PHP.' },
+          { date: 'Phase 4', title: 'Testing', desc: 'Validation, error handling, and query optimization.' },
+        ],
+      },
+      qydentra: {
+        title: 'Qydentra',
+        subtitle: 'Dental Clinic Queueing System',
+        label: 'Queue System',
+        desc: 'A queue management system for the PUP dental clinic that lets students reserve a slot, tracks queue status in real time, and helps staff manage patient flow more efficiently.',
+        github: 'https://github.com/snckish',
+        type: 'Web System',
+        stack: 'PHP · SQL',
+        url: 'snckish.github.io/qydentra',
+        team: 'Team of 4',
+        images: [
+          { src: 'assets/img/qydentra/user.png', tag: 'User' },
+          { src: 'assets/img/qydentra/dentist.png', tag: 'Dentist' },
+          { src: 'assets/img/qydentra/recep.png', tag: 'Receptionist' },
+          { src: 'assets/img/qydentra/admin.png', tag: 'Admin Dashboard' }
+        ],
+        tags: [
+          { icon: 'bi-filetype-php', label: 'PHP' },
+          { icon: 'bi-filetype-css', label: 'CSS' },
+          { icon: 'bi-database-fill', label: 'MySQL' },
+        ],
+        features: [
+          { icon: 'bi-calendar-check-fill', title: 'Slot Reservation', desc: 'Students book appointment slots in advance.' },
+          { icon: 'bi-clock-fill', title: 'Real-Time Queue', desc: 'Live queue status updates for staff and patients.' },
+          { icon: 'bi-person-lines-fill', title: 'Staff Dashboard', desc: 'Manage and update patient flow efficiently.' },
+          { icon: 'bi-bell-fill', title: 'Notifications', desc: 'Status updates keep patients informed.' },
+        ],
+        timeline: [
+          { date: 'Phase 1', title: 'Requirements', desc: 'Gathered clinic needs and flow requirements.' },
+          { date: 'Phase 2', title: 'System Design', desc: 'Designed queue logic, DB schema, and user roles.' },
+          { date: 'Phase 3', title: 'Development', desc: 'PHP backend, MySQL, and CSS frontend build.' },
+          { date: 'Phase 4', title: 'Testing', desc: 'End-to-end testing with simulated queue scenarios.' },
+        ],
+      },
+      magma: {
+        title: 'Magma Madness',
+        subtitle: '2D Pygame Adventure',
+        label: 'Game',
+        desc: 'A 2D game built using Python and Pygame, featuring interactive gameplay, player controls, and custom game mechanics with a fast-paced magma-themed environment.',
+        github: 'https://github.com/snckish',
+        url: 'github.com/snckish',
+        images: [
+          { src: 'assets/img/project/', tag: 'Gameplay' },
+          { src: 'assets/img/project/', tag: 'Level' },
+          { src: 'assets/img/project/', tag: 'Game Over' },
+        ],
+        tags: [
+          { icon: 'bi-filetype-py', label: 'Python' },
+          { icon: 'bi-controller', label: 'Pygame' },
+        ],
+        features: [
+          { icon: 'bi-controller', title: 'Smooth Controls', desc: 'Responsive keyboard controls for fluid gameplay.' },
+          { icon: 'bi-layers-fill', title: 'Custom Mechanics', desc: 'Unique game logic, collision, and scoring system.' },
+          { icon: 'bi-fire', title: 'Magma Theme', desc: 'Lava-themed world with obstacles and challenges.' },
+          { icon: 'bi-trophy-fill', title: 'Score System', desc: 'Track high scores and game progress.' },
+        ],
+        timeline: [
+          { date: 'Phase 1', title: 'Concept', desc: 'Game idea, mechanics outline, and asset planning.' },
+          { date: 'Phase 2', title: 'Core Loop', desc: 'Player movement, physics, and basic collision.' },
+          { date: 'Phase 3', title: 'Levels & Assets', desc: 'Level design, sprites, and sound integration.' },
+          { date: 'Phase 4', title: 'Polish', desc: 'Bug fixes, balancing, and final playthrough.' },
+        ],
+      },
+    };
+
+    // ─── Populate page from URL param ────────────────────
+    function getParam(key) {
+      return new URLSearchParams(window.location.search).get(key);
+    }
+
+    function populate() {
+      const id = getParam('p') || 'zythera';
+      const p = PROJECTS[id] || PROJECTS['zythera'];
+
+      document.title = p.title + ' — snckish';
+      document.getElementById('heroLabel').textContent = p.label + ' Project';
+      document.getElementById('heroTitle').innerHTML = p.title + '<span class="hl">.</span>';
+      document.getElementById('heroDesc').textContent = p.desc;
+      document.getElementById('heroGithub').href = p.github;
+      document.getElementById('ctaGithub').href = p.github;
+      document.getElementById('deviceUrl').textContent = p.url;
+      document.getElementById('overviewTitle').innerHTML = 'Project <span class="hl">Summary</span>';
+      document.getElementById('overviewDesc').textContent = p.desc;
+      document.getElementById('statType').textContent = p.type;
+      document.getElementById('statTeam').textContent = p.team || 'Solo';
+      document.getElementById('statStack').textContent = p.stack;
+      document.getElementById('footerYear').textContent = new Date().getFullYear();
+
+      // Tech badges
+      const tg = document.getElementById('techGrid');
+      tg.innerHTML = p.tags.map(t =>
+        `<span class="tech-badge reveal"><i class="bi ${t.icon}"></i> ${t.label}</span>`
+      ).join('');
+
+      // Feature cards
+      const fg = document.getElementById('featureGrid');
+      fg.innerHTML = p.features.map((f, i) =>
+        `<div class="feature-card reveal reveal-delay-${i+1}">
+          <div class="feature-icon"><i class="bi ${f.icon}"></i></div>
+          <div class="feature-title">${f.title}</div>
+          <div class="feature-desc">${f.desc}</div>
+        </div>`
+      ).join('');
+
+      // Timeline
+      const tl = document.getElementById('timeline');
+      tl.innerHTML = p.timeline.map(t =>
+        `<div class="tl-item reveal">
+          <div class="tl-date">${t.date}</div>
+          <div class="tl-title">${t.title}</div>
+          <div class="tl-desc">${t.desc}</div>
+        </div>`
+      ).join('');
+
+      // Screenshot carousel — built from p.images (set this per-project above)
+      const images = (p.images && p.images.length) ? p.images : [{ src: '', tag: 'Preview' }];
+      const indicators = document.getElementById('carouselIndicators');
+      const inner = document.getElementById('carouselInner');
+
+      indicators.innerHTML = images.map((img, i) =>
+        `<button type="button" data-bs-target="#mockupCarousel" data-bs-slide-to="${i}"
+          ${i === 0 ? 'class="active" aria-current="true"' : ''} aria-label="Slide ${i + 1}"></button>`
+      ).join('');
+
+      inner.innerHTML = images.map((img, i) => `
+        <div class="carousel-item${i === 0 ? ' active' : ''}">
+          <div class="mockup-slide">
+            <span class="mockup-slide-tag">${img.tag || ''}</span>
+            <div class="screenshot-ph tall">
+              <img src="${img.src}" alt="${p.title} — ${img.tag || 'screenshot'}" class="ss-img"
+                onerror="this.onerror=null; this.replaceWith(Object.assign(document.createElement('div'), {className:'ss-img-fallback', innerHTML:'<i class=\\'bi bi-image\\'></i><span>Add ${img.src.split('/').pop()}</span>'}));" />
+            </div>
+          </div>
+        </div>`
+      ).join('');
+
+      // Re-observe new elements
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    }
+
+    // ─── Scroll reveal ────────────────────────────────────
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ─── Read progress ────────────────────────────────────
+    const bar = document.getElementById('readProgress');
+    window.addEventListener('scroll', () => {
+      const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
+      bar.style.width = Math.min(pct, 100) + '%';
+    });
+
+    // ─── Smooth scroll anchor ─────────────────────────────
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+
+    populate();
+  </script>
+</body>
+</html>
