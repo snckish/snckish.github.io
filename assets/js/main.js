@@ -1,11 +1,11 @@
 /* =========================================================
-   PORTFOLIO — MAIN.JS (Dark side-nav edition)
+   PORTFOLIO — MAIN.JS 
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
 
   /* ---------------------------------------------------------
-     2. PROFILE IMAGE: hide <img> if src 404s, show placeholder
+     2. PROFILE IMAGE: 
      --------------------------------------------------------- */
   ["profileImg", "aboutImg"].forEach(function (id) {
     const img = document.getElementById(id);
