@@ -5,6 +5,17 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   /* ---------------------------------------------------------
+     1. READ PROGRESS BAR (mirrors project.html)
+     --------------------------------------------------------- */
+  const readBar = document.getElementById("readProgress");
+  if (readBar) {
+    window.addEventListener("scroll", function () {
+      const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
+      readBar.style.width = Math.min(pct, 100) + "%";
+    });
+  }
+
+  /* ---------------------------------------------------------
      2. PROFILE IMAGE: 
      --------------------------------------------------------- */
   ["profileImg", "aboutImg"].forEach(function (id) {
