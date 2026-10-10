@@ -12,15 +12,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  ["profileImg", "aboutImg"].forEach(function (id) {
+  ["profileImg"].forEach(function (id) {
     const img = document.getElementById(id);
     if (!img) return;
     img.addEventListener("error", function () {
       img.style.display = "none";
     });
     img.addEventListener("load", function () {
-      const placeholderId =
-        id === "profileImg" ? "photoPlaceholder" : "aboutPlaceholder";
+      const placeholderId = "photoPlaceholder";
       const ph = document.getElementById(placeholderId);
       if (ph) ph.style.display = "none";
     });
