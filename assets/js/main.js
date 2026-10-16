@@ -1,5 +1,3 @@
-// Main script for index.html: scroll progress bar, profile image fallback, active nav link, mobile menu, fade-in on scroll, contact form, footer year.
-
 document.addEventListener("DOMContentLoaded", function () {
   const readBar = document.getElementById("readProgress");
   if (readBar) {

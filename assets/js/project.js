@@ -1,5 +1,3 @@
-// Project detail page logic: fills project.html from the PROJECTS data below (selected via ?p=), plus scroll reveal, progress bar and smooth scroll.
-
 const PROJECTS = {
   zythera: {
     title: "Zythera",

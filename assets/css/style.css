@@ -1,5 +1,3 @@
-/* Global styles for the portfolio (index.html and project.html): theme variables, layout, components, and responsive rules. */
-
 :root {
   --bg: #1a1f2e;
   --bg-card: #212738;
@@ -25,6 +23,7 @@
   margin: 0;
   padding: 0;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -45,6 +44,7 @@ a {
   text-decoration: none;
   transition: color var(--tr);
 }
+
 a:hover {
   color: var(--white);
 }
@@ -138,6 +138,7 @@ img {
     visibility var(--tr);
   box-shadow: var(--shadow);
 }
+
 .side-btn:hover::after {
   opacity: 1;
   visibility: visible;
@@ -200,9 +201,11 @@ img {
   font-weight: 500;
   font-size: 0.95rem;
 }
+
 .mobile-link:last-child {
   border-bottom: none;
 }
+
 .mobile-link:hover,
 .mobile-link.active {
   color: var(--green-bright);
@@ -217,8 +220,7 @@ img {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: clamp(4rem, 8vw, 5rem) clamp(1.5rem, 6.4vw, 4rem)
-    clamp(4rem, 8vw, 5rem) clamp(1.5rem, 8vw, 5rem);
+  padding: clamp(4rem, 8vw, 5rem) clamp(1.5rem, 6.4vw, 4rem) clamp(4rem, 8vw, 5rem) clamp(1.5rem, 8vw, 5rem);
 }
 
 .section-inner {
@@ -230,6 +232,7 @@ img {
 .section-heading {
   margin-bottom: 3rem;
 }
+
 .sec-label {
   font-size: 0.78rem;
   font-weight: 600;
@@ -238,6 +241,7 @@ img {
   color: var(--green-bright);
   margin-bottom: 0.5rem;
 }
+
 .sec-title {
   font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 800;
@@ -382,6 +386,7 @@ img {
   color: var(--white);
   background-color: var(--bg-card);
 }
+
 .btn-cv:hover .cv-icon {
   background-color: var(--green);
 }
@@ -395,6 +400,7 @@ img {
   gap: 0.4rem;
   transition: color var(--tr);
 }
+
 .btn-contact-link:hover {
   color: var(--green-bright);
 }
@@ -415,6 +421,7 @@ img {
     box-shadow var(--tr),
     border-color var(--tr);
 }
+
 .skills-card::before {
   content: "";
   position: absolute;
@@ -424,6 +431,7 @@ img {
   height: 3px;
   background: linear-gradient(90deg, var(--green), var(--green-bright));
 }
+
 .skills-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow);
@@ -441,6 +449,7 @@ img {
   align-items: center;
   gap: 0.6rem;
 }
+
 .skills-card-title::before {
   content: "";
   display: inline-block;
@@ -497,6 +506,7 @@ img {
   background-color: rgba(61, 186, 94, 0.08);
   box-shadow: 0 10px 22px rgba(61, 186, 94, 0.16);
 }
+
 .skill-tile:hover span {
   color: var(--text);
 }
@@ -517,6 +527,7 @@ img {
     box-shadow var(--tr),
     border-color var(--tr);
 }
+
 .proj-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow);
@@ -525,11 +536,9 @@ img {
 
 .proj-thumb {
   height: 180px;
-  background: linear-gradient(
-    135deg,
-    rgba(53, 94, 59, 0.3) 0%,
-    rgba(61, 186, 94, 0.1) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(53, 94, 59, 0.3) 0%,
+      rgba(61, 186, 94, 0.1) 100%);
   overflow: hidden;
   border-bottom: 1px solid var(--border);
 }
@@ -540,12 +549,14 @@ img {
   flex-direction: column;
   flex-grow: 1;
 }
+
 .proj-body h5 {
   font-size: 1rem;
   font-weight: 700;
   color: var(--text);
   margin-bottom: 0.5rem;
 }
+
 .proj-body p {
   font-size: 0.875rem;
   color: var(--text-muted);
@@ -566,6 +577,7 @@ img {
   gap: 0.3rem;
   margin-bottom: 0.85rem;
 }
+
 .tag {
   font-size: 0.7rem;
   font-weight: 600;
@@ -582,6 +594,7 @@ img {
   justify-content: flex-end;
   margin-top: auto;
 }
+
 .proj-links a {
   font-size: 0.85rem;
   font-weight: 600;
@@ -591,6 +604,7 @@ img {
   gap: 0.3rem;
   transition: color var(--tr);
 }
+
 .proj-links a:hover {
   color: var(--green-bright);
 }
@@ -612,6 +626,7 @@ img {
   max-width: 360px;
   margin: 0 auto;
 }
+
 .proj-card.proj-featured:hover {
   transform: scale(1.045) translateY(-5px);
   box-shadow: 0 18px 46px rgba(61, 186, 94, 0.26);
@@ -629,6 +644,7 @@ img {
   padding: 1rem 0;
   border-bottom: 1px solid var(--border);
 }
+
 .contact-item:last-child {
   border-bottom: none;
 }
@@ -655,10 +671,12 @@ img {
   color: var(--text-dim);
   margin-bottom: 0.15rem;
 }
+
 .ci-value {
   font-size: 0.92rem;
   color: var(--text);
 }
+
 a.ci-value:hover {
   color: var(--green-bright);
 }
@@ -681,9 +699,11 @@ a.ci-value:hover {
     border-color var(--tr),
     box-shadow var(--tr);
 }
+
 .contact-form .form-control::placeholder {
   color: var(--text-dim);
 }
+
 .contact-form .form-control:focus {
   background-color: var(--bg-card);
   border-color: var(--green-bright);
@@ -711,6 +731,7 @@ a.ci-value:hover {
     opacity 0.55s ease,
     transform 0.55s ease;
 }
+
 .fade-in.visible {
   opacity: 1;
   transform: none;
@@ -719,9 +740,11 @@ a.ci-value:hover {
 .fade-in-delay-1 {
   transition-delay: 0.1s;
 }
+
 .fade-in-delay-2 {
   transition-delay: 0.2s;
 }
+
 .fade-in-delay-3 {
   transition-delay: 0.3s;
 }
